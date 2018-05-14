@@ -6,7 +6,8 @@ describe('template literals', () => {
       age: 25
     }
 
-    const message = 'You know nothing' + patron.firstName + ' ' + patron.lastName
+    // const message = 'You know nothing ' + patron.firstName + ' ' + patron.lastName
+    const message = `You know nothing ${patron.firstName} ${patron.lastName}`
     expect(message).toContain(patron.firstName)
     expect(message).toContain(patron.lastName)
   })
@@ -18,7 +19,8 @@ describe('template literals', () => {
       age: 25
     }
 
-    const message = 'You know nothing' + [patron.firstName, patron.lastName].join(' ')
+    // const message = 'You know nothing' + [patron.firstName, patron.lastName].join(' ')
+    const message = `You know nothing ${[patron.firstName, patron.lastName].join(' ')}`
     expect(message).toContain(patron.firstName)
     expect(message).toContain(patron.lastName)
   })

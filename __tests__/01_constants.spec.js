@@ -1,8 +1,8 @@
 describe('constants', () => {
   it('is best used when a value does not change', () => {
     function determineBouncerAction() {
-      let drinkingAge = 21
-      let cardedCustomerAge = 22
+      const drinkingAge = 21
+      const cardedCustomerAge = 22
 
       if(cardedCustomerAge > drinkingAge){
         return 'let them in'

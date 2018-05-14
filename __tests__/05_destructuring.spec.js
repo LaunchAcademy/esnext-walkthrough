@@ -1,9 +1,10 @@
 describe('destructuring', () => {
   it('destructures JSON', () => {
     const Patron = (traits) => {
-      const firstName = traits.firstName
-      const lastName = traits.lastName
-      const age = traits.age
+      // const firstName = traits.firstName
+      // const lastName = traits.lastName
+      // const age = traits.age
+      const { firstName, lastName, age } = traits
 
       return {
         firstName: firstName,
@@ -23,13 +24,14 @@ describe('destructuring', () => {
 
   it('deep destructures', () => {
     const Patron = (traits) => {
-      const firstName = traits.firstName
-      const lastName = traits.lastName
-      const age = traits.age
-      const street = traits.address.street
-      const city = traits.address.city
-      const state = traits.address.state
-      const postalCode = traits.address.postalCode
+      // const firstName = traits.firstName
+      // const lastName = traits.lastName
+      // const age = traits.age
+      // const street = traits.address.street
+      // const city = traits.address.city
+      // const state = traits.address.state
+      // const postalCode = traits.address.postalCode
+      const { firstName, lastName, age, address: { street, city, state }} = traits
 
       return {
         firstName: firstName,

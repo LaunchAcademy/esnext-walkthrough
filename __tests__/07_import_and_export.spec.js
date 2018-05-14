@@ -1,18 +1,6 @@
-const calculateArea = (width, height) => {
-  return width * height
-}
-
-const calculatePerimeter = (width, height) => {
-  return width * 2 + height * 2
-}
-
-const calculateCircleArea = (radius) => {
-  return Math.PI * radius * 2
-}
-
-const calculateCirclePerimeter = (radius) => {
-  return Math.PI * radius * radius
-}
+// import { calculateArea, calculatePerimeter } from '../src/rectangle.js'
+// import calculateArea, { calculatePerimeter } from '../src/rectangle.js'
+import { * } as Rectange from '../src/rectangle.js'
 
 describe('importing and exporting modules', () => {
   it('allows us to selectively pull modules in', () => {
@@ -26,7 +14,7 @@ describe('importing and exporting modules', () => {
   })
 
   it('allows us to alias', () => {
-    expect(calculateArea(2,4)).toEqual(8)
+    expect(Rectangle.calculateArea(2,4)).toEqual(8)
     expect(calculatePerimeter(2,4)).toEqual(12)
 
   })
